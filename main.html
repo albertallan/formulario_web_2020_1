@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Formulário</title> <!-- cabeçalho titulo -->
+		<meta charset="utf-8"> <!-- para codificar o padrão de acentuação UTF-8 -->
+
+		<script type="text/javascript" src="./JS/script.js"></script>
+		
+        <style type="text/css">
+        
+            h1{
+                color:blue;
+                font-size: 20px;
+            }
+            label {
+                color:crimson;
+                font-size: 15px;
+            }
+
+            div {
+                border: 1px solid;
+                margin: 13px;
+                padding: 19px;
+            }
+
+            #div-usuario{
+                border: 5px solid orange;
+            }
+            
+            .div-campos{
+                border: 5px solid red;
+
+            }
+
+            form{
+                border: 20px solid grey;
+            }
+        </style>
+
+    </head>
+
+	<body onload="message('Ola Body');">
+
+		<a href="#" onclick="message2('OLA CARAI');">LINK</a>
+
+		<h1 style="color:chartreuse;">Formulário</h1>
+        <h1 onmouseover="message('KIOOOL');">Formulário2</h1>
+		<form method="POST" action=""> <!-- metodo POST envia os dados no corpo da requisição(sem exibir na URL) --> <!-- ACTION define o destino dos dados -->
+			<div id="div-usuario" class="div-campos">
+				<label>Nome:</label>
+				<input type="text" name="nome" placeholder="Digite seu Nome"> <!-- placeholder é o texto opaco dentro do campo -->
+			</div>
+
+			<div class="div-campos">
+				<label>CPF:</label>
+				<input type="text" name="cpf" placeholder="Digite seu CPF">
+			</div>
+
+			<div>
+				<label>Data de Nascimento:</label>
+				<input type="date" name="data_nascimento">
+			</div>
+
+			<div>
+				<label>Numero da Residencia:</label>
+				<input type="number" name="numero_residencia">
+			</div>
+
+			<div>
+				<label>E-Mail:</label>
+				<input type="email" name="email">
+			</div>
+
+			<div>
+				<label>Sexo:</label>
+				<input type="radio" name="sexo" value "M">Masculino
+				<input type="radio" name="sexo" value "F">Feminino
+
+			</div>
+
+			<div>
+				<label>Interesses:</label> <br> <!-- quebra de linha -->
+				<input type="checkbox" name="interesses[]" value "F">Futebol <br> <!-- quebra de linha -->
+				<input type="checkbox" name="interesses[]" value "V">Volei <br> <!-- quebra de linha -->
+				<input type="checkbox" name="interesses[]" value "D">Dança <br> <!-- quebra de linha -->
+				<input checked type="checkbox" name="interesses[]" value "C">Cerveja <br> <!-- o checked seleciona por padrão --> <!-- quebra de linha-->
+			</div>
+
+			<div>
+				<label>Cidade:</label> <br> <!-- quebra de linha -->
+				<select name="cidade">
+					<option>
+						Selecione uma Cidade
+					</option>
+
+					<option value="1">
+						Lavras
+					</option>
+
+					<option selected value="2"> <!-- o selected seleciona por padrão -->
+						Cambuquira
+					</option>
+
+					<option value="3">
+						Três Corações
+					</option>
+
+				</select>
+			</div>
+
+			<div>
+				<label>Senha:</label>
+				<input type="password" name="senha">
+
+			</div>
+
+            <div>
+                <label>Texto:</label>
+                <textarea name="texto"></textarea>
+            </div>
+    
+            
+			<div>
+
+				<input type="submit" name="btn_enviar" value="Enviar Dados">
+                <input type="reset" name="btn_resetar" value="Reseta os Dados">
+
+			</div>
+
+            <input type= "hidden" name="id" value="">
+
+		</form>
+
+
+	</body>
+</html>
